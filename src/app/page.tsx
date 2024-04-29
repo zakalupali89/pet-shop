@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Slider from '@mui/material/Slider';
+import ButtonSignIn from "@/components/test/ButtonSignIn";
+import ButtonSignOut from "@/components/test/ButtonSignOut";
 
 export default function Home() {
+  console.log(process.env.NEXTAUTH_SECRET)
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -46,6 +49,8 @@ export default function Home() {
       <div className="w-60">
         <Slider defaultValue={30}/>
         <Slider defaultValue={30} className="text-teal-200"/>
+        <ButtonSignIn/>
+        <ButtonSignOut/>
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
